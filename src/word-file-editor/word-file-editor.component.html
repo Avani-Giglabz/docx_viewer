@@ -1,0 +1,21 @@
+
+   <!-- <div>
+    <button (click)="onClickLoad()" class="btn btn-primary">Load Document</button>
+    <button (click)="onClickSave()" class="btn btn-primary">Save Document</button>
+  </div>
+<div #viewer style="height: 600px;"></div>
+
+<div #editorContainer style="width: 100%; height: 700px;"></div> -->
+
+<label for="file_upload">Choose A file </label>
+<input type="file" id="file_upload" name="file_upload" accept=".doc,.docx" 
+(change)="onFileChange($event)">
+<div #viewerElement style="width: 100%; height: 700px;"></div>
+
+<!-- <ejs-documenteditorcontainer 
+    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" 
+    [enableToolbar]="true" 
+    [enableRtl]=true
+    [height]="'600px'"
+    #documentEditor> -->
+<!-- </ejs-documenteditorcontainer> -->

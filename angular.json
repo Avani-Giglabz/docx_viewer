@@ -5,7 +5,11 @@
   "projects": {
     "files-editor": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,12 +28,19 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@pdftron/webviewer/public",
+                "output": "/assets/lib"
               }
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@pdftron/webviewer/webviewer.min.js"
+            ]
           },
           "configurations": {
             "production": {
